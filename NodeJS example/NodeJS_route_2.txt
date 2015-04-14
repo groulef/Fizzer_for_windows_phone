@@ -1,0 +1,28 @@
+exports.post = function(req, res) {
+    var mssql = req.service.mssql;
+    var connexion = "SELECT mail FROM fizzerapi.fizzer_table WHERE mail = ?";
+    //var connexionmdp = "SELECT mail FROM fizzerapi.fizzer_table WHERE password = ?";
+    mssql.query(connexion, [req.query.mail], {
+        success: function(results) {
+            if (results.length == 0) {
+                var connexion = "SELECT mail FROM fizzerapi.fizzer_table WHERE password = ?";
+                mssql.query(connexion, [req.query.password], {
+                    success: function(results) {
+                        if (results.length == 0) {
+                            res.send(409, "Votre mail ou votre mot de passe est incorrect!");
+                        }
+                    },
+                    error: function(results) {
+                        res.send(500, results)
+                    }
+                });
+            }
+            else {
+                res.send(409, "Vous êtes connecté.");
+            }
+        },
+        error: function(results) {
+            res.send(500, results)
+        }
+    });
+}

@@ -1,0 +1,11 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\tom\source\repos\final fizzer\windowsphone\obj\debug\intermediatexaml\filepicker.windowsphone.exe" HashGuid="b50e079e-2d25-65ea-b2c0-619a1d405967" />
+    <ReferenceAssembly PathName="c:\users\tom\source\repos\final fizzer\packages\windowsazure.mobileservices.1.2.5\lib\wpa81\microsoft.windowsazure.mobile.dll" HashGuid="e2805223-ada5-1529-dd20-9739fab12f68" />
+    <ReferenceAssembly PathName="c:\users\tom\source\repos\final fizzer\packages\windowsazure.mobileservices.1.2.5\lib\wpa81\microsoft.windowsazure.mobile.ext.dll" HashGuid="d14f6c57-ffca-9ad1-126f-ce93487ab524" />
+    <ReferenceAssembly PathName="c:\users\tom\source\repos\final fizzer\packages\newtonsoft.json.6.0.4\lib\portable-net45+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="02b12ba6-881e-6b8a-1687-5b2ee1851a11" />
+    <ReferenceAssembly PathName="c:\users\tom\source\repos\final fizzer\packages\microsoft.net.http.2.2.28\lib\wpa81\system.net.http.extensions.dll" HashGuid="794366f8-cc6d-f0fa-3d07-33b45136e193" />
+    <ReferenceAssembly PathName="c:\users\tom\source\repos\final fizzer\packages\microsoft.aspnet.webapi.client.5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\system.net.http.formatting.dll" HashGuid="2be584ba-1a95-71f0-a34d-ef121720ead4" />
+    <ReferenceAssembly PathName="c:\users\tom\source\repos\final fizzer\packages\microsoft.net.http.2.2.28\lib\wpa81\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

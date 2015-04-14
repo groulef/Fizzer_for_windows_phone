@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="SDKTemplate.adressdest"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SDKTemplate"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" HorizontalAlignment="Stretch" Background="#FF52B3D9" Margin="0,0,0,0">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Quel est le destinataire de cette carte ?" FontSize="20" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,10.167,19,-1">
+            <TextBlock Text="Nom  Prénom" Margin="20,30" FontSize="30"></TextBlock>
+            <TextBox PlaceholderText="Jean Dupond" Background="White" x:Name="namedest" Margin="20,65"></TextBox>
+            <TextBlock Text="Adresse" Margin="20,120" FontSize="30" SelectionChanged="TextBlock_SelectionChanged"></TextBlock>
+            <TextBox x:Name="addresse" PlaceholderText="8bis rue Du Moulin" Background="White" Margin="20,155"></TextBox>
+            <TextBlock Text="Ville" Margin="20,210" FontSize="30"></TextBlock>
+            <TextBox PlaceholderText="Paris" x:Name="citydest" Margin="20,245"></TextBox>
+            <TextBlock Text="Code Postal" Margin="20,300,20,209" FontSize="30"></TextBlock>
+            <TextBox PlaceholderText="75001" x:Name="zipcode" Margin="20,335,20,0" Height="40"></TextBox>
+            <TextBlock Text="Pays" Margin="20,386,20,146" FontSize="30"></TextBlock>
+            <TextBox PlaceholderText="FRANCE" x:Name="countrydest" Margin="20,425,20,0" Height="40"></TextBox>
+            <Button Content="Envoyer" HorizontalAlignment="Right" Click="button_connexion" Margin="240,505,10,0" VerticalAlignment="Top"/>
+
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,55 @@
+exports.register = function(api) {
+    api.post('connexion', function(req, res) {
+        var mssql = req.service.mssql;
+        var connexion = "SELECT mail FROM fizzerapi.fizzer_table WHERE mail = ?, password = ?";
+        mssql.query(connexion, [req.query.mail, req.query.password], {
+            success: function(results) {
+                if (results.length == 0) {
+                    res.send(409, "Votre mail ou votre mot de pass est incorrecte!");
+                }
+                else
+                {
+                    res.send(200, results);
+                }
+            },
+            error: function(results) {
+                res.send(500, "fail")
+        }
+        });
+    });
+}
+
+
+exports.register = function(api) {
+    api.post('register', function(req, res) {
+        register(req, res);
+    });
+}
+
+function register(req, res)
+{
+    var mssql = req.service.mssql;
+        var check = "SELECT mail FROM fizzerapi.fizzer_table WHERE mail = ?";
+        var sql = "INSERT INTO fizzerapi.fizzer_table (mail, firstname, lastname, password) VALUES (?,?,?,?)";
+
+        mssql.query(check, [req.query.mail], {
+            success: function(results) {
+                if (results.length == 0) {
+                    mssql.query(sql, [req.query.mail, req.query.firstname, req.query.lastname, req.query.password], {
+                        success: function(results) {
+                            res.send(409, "Félicitations! Vous êtes inscrit.");
+                        },
+                        error: function(err) {
+                            res.send(500, err);
+                        }
+                    });
+                }
+                else {
+                    res.send(409, "Ce mail est déjà utilisé.");
+                }
+            },
+            error: function(err) {
+                res.send(500, err);
+            }
+        });
+}

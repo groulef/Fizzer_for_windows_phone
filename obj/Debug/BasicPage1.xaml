@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="SDKTemplate.BasicPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SDKTemplate"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid HorizontalAlignment="Stretch" Background="#FF52B3D9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="561*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="22,13,0,0" TextWrapping="Wrap" Text="Fizzer" VerticalAlignment="Top" RenderTransformOrigin="-0.395,-2.376" Height="35" Width="79" FontSize="28"/>
+        <TextBlock HorizontalAlignment="Right" Margin="0,25,-6,0" TextWrapping="Wrap" Text="Connexion" VerticalAlignment="Top" FontSize="48" Width="259" Height="58" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button x:ConnectionId='1' Content="Connexion" HorizontalAlignment="Stretch"                               Margin="10,172.833,10,0" VerticalAlignment="Top" Grid.Row="1" Height="141"/>
+        <Button x:ConnectionId='2' Content="Créer un compte" FontSize="14" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="10,476.833,10,0"                            Grid.Row="1" Height="67"/>
+        <TextBox x:Name="mail" PlaceholderText="Adresse mail" HorizontalAlignment="Stretch" Margin="10,43.833,10,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="46">
+        </TextBox>
+        <PasswordBox x:Name="password" PlaceholderText="Mot de passe" HorizontalAlignment="Stretch" Margin="10,111.833,10,0" Grid.Row="1" VerticalAlignment="Top" Height="46"/>
+    </Grid>
+</Page>
+
